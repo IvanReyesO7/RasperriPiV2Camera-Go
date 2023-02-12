@@ -2,16 +2,32 @@ package main
 
 import (
 	"gocv.io/x/gocv"
+	"github.com/hybridgroup/mjpeg"
+	"log"
+	"net/http"
 )
 
 func main() {
-	webcam, _ := gocv.VideoCaptureDevice(0)
-	window := gocv.NewWindow("Hello")
-	img := gocv.NewMat()
+	webcam,err := gocv.VideoCaptureDevice(0)
+	if err != nil{
+		log.Fatal("Error getting video device: ", err)
+		return
+	}
+	defer webcam.Close()
+	stream := mjpeg.NewStream()
 
-	for {
-		webcam.Read(&img)
-		window.IMShow(img)
-		window.WaitKey(1)
+	go func() {
+		for {
+			img := gocv.NewMat()
+			webcam.Read(&img)
+
+			buf, _ := gocv.IMEncode(".jpg", img)
+			stream.UpdateJPEG(buf.GetBytes())
+		}
+	}()
+	http.Handle("/", stream)
+	err = http.ListenAndServe(":8080", nil)
+	if err != nil {
+		panic(err)
 	}
 }
