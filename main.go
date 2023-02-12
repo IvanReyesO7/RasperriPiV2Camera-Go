@@ -19,6 +19,7 @@ func main() {
 	go func() {
 		for {
 			img := gocv.NewMat()
+			defer img.Close()
 			webcam.Read(&img)
 
 			buf, _ := gocv.IMEncode(".jpg", img)
