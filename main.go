@@ -1,15 +1,16 @@
 package main
 
 import (
-	"gocv.io/x/gocv"
-	"github.com/hybridgroup/mjpeg"
 	"log"
 	"net/http"
+
+	"github.com/hybridgroup/mjpeg"
+	"gocv.io/x/gocv"
 )
 
 func main() {
-	webcam,err := gocv.VideoCaptureDevice(0)
-	if err != nil{
+	webcam, err := gocv.VideoCaptureDevice(0)
+	if err != nil {
 		log.Fatal("Error getting video device: ", err)
 		return
 	}
