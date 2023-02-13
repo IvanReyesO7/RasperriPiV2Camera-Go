@@ -10,6 +10,7 @@ import (
 func main() {
 	gin.SetMode(gin.ReleaseMode)
 	server := gin.Default()
+	go controller.Getframes()
 
 	server.Static("/assets", "./assets")
 	server.LoadHTMLGlob("templates/index.html")
