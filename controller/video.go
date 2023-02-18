@@ -9,14 +9,6 @@ import (
 	"gocv.io/x/gocv"
 )
 
-var (
-	Err      error
-	Webcam   *gocv.VideoCapture
-	window   *gocv.Window
-	frame_id int
-)
-
-var buffer = make(map[int][]byte)
 var frame []byte
 var mutex = &sync.Mutex{}
 
@@ -45,7 +37,6 @@ func Getframes() {
 
 	for {
 		img := gocv.NewMat()
-		defer img.Close()
 		// if img.Empty() {
 		// 	continue
 		// }
@@ -53,6 +44,5 @@ func Getframes() {
 
 		buf, _ := gocv.IMEncode(".jpg", img)
 		frame = buf.GetBytes()
-
 	}
 }
