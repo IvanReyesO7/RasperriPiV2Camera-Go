@@ -24,8 +24,7 @@ func Video(c *gin.Context) {
 	c.Writer.Header().Set("Content-Type", "multipart/x-mixed-replace; boundary=frame")
 	data := ""
 	for {
-		/*			fmt.Println("Frame ID: ", frame_id)
-		 */mutex.Lock()
+		mutex.Lock()
 
 		data = "--frame\r\n  Content-Type: image/jpeg\r\n\r\n" + string(frame) + "\r\n\r\n"
 
