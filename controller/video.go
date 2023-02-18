@@ -44,5 +44,7 @@ func Getframes() {
 
 		buf, _ := gocv.IMEncode(".jpg", img)
 		frame = buf.GetBytes()
+
+		img.Close()
 	}
 }
