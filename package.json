@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/IvanReyesO7/RasperriPiV2Camera-Go/issues"
   },
-  "homepage": "https://github.com/IvanReyesO7/RasperriPiV2Camera-Go#readme"
+  "homepage": "https://github.com/IvanReyesO7/RasperriPiV2Camera-Go#readme",
+  "dependencies": {
+    "jquery": "^3.6.3"
+  }
 }
