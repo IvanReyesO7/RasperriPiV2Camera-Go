@@ -1,0 +1,19 @@
+{
+  "name": "rasperripiv2camera-go",
+  "version": "1.0.0",
+  "description": "Small web application to stream video taken from a raspberry pi V2 Camera",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanReyesO7/RasperriPiV2Camera-Go.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IvanReyesO7/RasperriPiV2Camera-Go/issues"
+  },
+  "homepage": "https://github.com/IvanReyesO7/RasperriPiV2Camera-Go#readme"
+}
