@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 let placeholder = "https://www.shoshinsha-design.com/wp-content/uploads/2020/05/noimage.png"
 
 $('#preview-btn').click(function(){
