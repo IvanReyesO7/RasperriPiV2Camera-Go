@@ -18,5 +18,9 @@
   "homepage": "https://github.com/IvanReyesO7/RasperriPiV2Camera-Go#readme",
   "dependencies": {
     "jquery": "^3.6.3"
+  },
+  "devDependencies": {
+    "webpack": "^5.76.0",
+    "webpack-cli": "^5.0.1"
   }
 }
