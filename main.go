@@ -12,7 +12,7 @@ func main() {
 	server := gin.Default()
 	go controller.Getframes()
 
-	server.Static("/assets", "./assets")
+	server.Static("/public", "./public")
 	server.Static("/node_modules", "./node_modules")
 
 	server.LoadHTMLGlob("templates/index.html")
