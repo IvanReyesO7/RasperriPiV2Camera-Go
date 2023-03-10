@@ -13,6 +13,8 @@ func main() {
 	go controller.Getframes()
 
 	server.Static("/assets", "./assets")
+	server.Static("/node_modules", "./node_modules")
+
 	server.LoadHTMLGlob("templates/index.html")
 
 	server.GET("/", func(c *gin.Context) {
