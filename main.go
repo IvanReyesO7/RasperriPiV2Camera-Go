@@ -13,6 +13,7 @@ func main() {
 	go controller.Getframes()
 
 	server.Static("/public", "./public")
+	server.Static("/dist", "./dist")
 	server.Static("/node_modules", "./node_modules")
 
 	server.LoadHTMLGlob("templates/index.html")
