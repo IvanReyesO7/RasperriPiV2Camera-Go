@@ -4,3 +4,14 @@
   justify-content: center;
   align-items: center;
 }
+
+#controllers{
+  margin: 25px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-btn-default{
+  padding: 10px 40px;
+}
