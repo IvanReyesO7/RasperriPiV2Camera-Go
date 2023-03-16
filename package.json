@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/IvanReyesO7/RasperriPiV2Camera-Go#readme",
   "dependencies": {
-    "jquery": "^3.6.3"
+    "autoprefixer": "^10.4.14",
+    "jquery": "^3.6.3",
+    "postcss": "^8.4.21"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
